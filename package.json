@@ -1,23 +1,38 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-yaml-autofold",
 	"version": "0.12.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Forces the YAML block to collapse when in edit mode.",
 	"main": "main.js",
-	"scripts": {
-		"dev": "node esbuild.config.mjs",
-		"build": "node esbuild.config.mjs production"
-	},
-	"keywords": [],
-	"author": "",
+  "scripts": {
+    "dev": "rollup --config rollup.config.js -w",
+    "build": "rollup --config rollup.config.js",
+    "lint": "eslint ./src --fix && tsc --noEmit --pretty",
+    "test": "jest --ci",
+    "test:dev": "jest --watch"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "obsidian-md"
+  ],
+	"author": "Jon Bullen <github@sytone.com>",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/node": "^16.11.6",
-		"@typescript-eslint/eslint-plugin": "^5.2.0",
-		"@typescript-eslint/parser": "^5.2.0",
-		"builtin-modules": "^3.2.0",
-		"esbuild": "0.13.12",
+    "@arkweid/lefthook": "^0.7.6",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
 		"obsidian": "^0.12.17",
-		"tslib": "2.3.1",
-		"typescript": "4.4.4"
+    "prettier": "^2.2.1",
+    "rollup": "^2.56.3",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
 	}
 }

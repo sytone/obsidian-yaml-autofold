@@ -15,18 +15,8 @@ This sample plugin demonstrates some of the basic functionality the plugin API c
 - Registers a global click event and output 'click' to the console.
 - Registers a global interval which logs 'setInterval' to the console.
 
-### First time developing plugins?
-
-Quick starting guide for new plugin devs:
-
-- Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
-- Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+### Development
+Clone the repository, run `yarn` to install the dependencies, and run `yarn dev` to compile the plugin and watch file changes.
 
 ### Releasing new releases
 
@@ -53,7 +43,7 @@ Quick starting guide for new plugin devs:
 - Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
 
 ### Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
+- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code.
 - To use eslint with this project, make sure to install eslint from terminal:
   - `npm install -g eslint`
 - To use eslint to analyze this project use this command:
